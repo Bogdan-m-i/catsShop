@@ -1,0 +1,35 @@
+.scroll-top {
+	content: '';
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	z-index: 1000;
+	opacity: .5;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s ease;
+
+	&.active {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	@include md {
+		right: 10px;
+		bottom: 10px;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&.btn {
+		border-radius: 0;
+		padding: 0;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

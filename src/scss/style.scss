@@ -1,0 +1,51 @@
+@import './_var';
+@import './mixins/_screen';
+@import './mixins/_font-face';
+@import './_fonts';
+@import './grid';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import './form';
+@import './nav';
+@import './header';
+@import './sort';
+@import './cards';
+@import './footer';
+@import './scroll-top';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+.h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+}

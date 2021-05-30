@@ -1,0 +1,122 @@
+.form {
+	font-size: 14px;
+
+	&__error {
+		font-size: 12px;
+		color: $red;
+		position: absolute;
+		bottom: -18px;
+		left: 13px;
+		right: 0;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__group {
+		margin: 0 8px 25px;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		position: relative;
+	}
+
+	&__group_inline {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&__row {
+		display: flex;
+		margin: 0 -8px;
+		position: relative;
+		flex-wrap: wrap;
+	}
+
+	input:invalid {
+		& + .form__error {
+			//display: block;
+		}
+	}
+
+	input[type=checkbox] {
+		margin-right: 36px;
+		width: 0px;
+		height: 0px;
+		position: relative;
+
+		& + label {
+			cursor: pointer;
+			&::before {
+				position: absolute;
+				content: '';
+				width: 18px;
+				height: 18px;
+				top: 0;
+				left: 0;
+				background: $blue;
+				border-radius: 3px;
+			}
+		}
+
+		&:checked {
+			& + label {
+				&::before {
+					background: $blue url('../img/checked.svg') center center no-repeat;
+				}
+			}
+		}
+	}
+
+	input[type=email],
+	input[type=text] {
+		padding: 22px 30px;
+		font-weight: bold;
+		border-radius: 10px;
+		border: none;
+		width: 100%;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.btn {
+	border: none;
+	border-radius: $br;
+	padding: 22px 30px;
+	font-weight: bold;
+	&:focus {
+		outline: none;
+	}
+}
+
+.btn_transparent {
+	background: transparent;
+	font-weight: normal;
+	border: 1px solid $gray;
+
+	&:hover {
+		border: 1px solid $black;
+	}
+}
+
+.btn_blue {
+	background: $blue;
+	color: $white;
+
+	&:hover {
+		background: $blue-hover;
+	}
+	&:active {
+		background: $blue-active;
+	}
+}
+
+.btn_black {
+	background: $black;
+	color: $white;
+}

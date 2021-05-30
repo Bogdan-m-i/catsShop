@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <header class="header">
+        <nav class="header__nav nav">
+            <div class="nav__container container">
+                <div class="nav__logo">
+                    <a href="#"><img src="./img/logo.svg" alt="logo"></a>
+                </div>
+                <div class="nav__toggle">
+                    <button class="nav__toggle-btn"></button>
+                </div>
+                <div class="nav__mobile-wrap">
+                    <ul class="nav__menu">
+                        <li class="nav__link">
+                            <a href="#test1">Main</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#test2">Gallery</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#test2">News</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#test3">Profile</a>
+                        </li>
+                    </ul>
+                    <div class="nav__right">
+                        <div class="nav__phone"><a href="tel:+544349000000">+544 3490 00000</a></div>
+                        <div class="nav__desc">Звони скорее!</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="header__h container">
+            <h1 class="h1">Найдено 349 котов</h1>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <div class="sort">
+                <div class="sort__title">Сортировать по:</div>
+                <div class="sort__price">
+                    <button class="sort__btn sort__btn_price">Цене</button>
+                </div>
+                <div class="sort__age">
+                    <button class="sort__btn sort__btn_age">Возрасту</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cards__content">
+                    <!-- <div class="cards__item card saled">
+                        <div class="card__img">
+                            <img src="./img/cats/cat-1.png" alt="cat 1" width="380" height="264">
+                        </div>
+                        <div class="card__desc">
+                            <div class="card__name"><h3 class="h3">Кот полосатый</h3></div>
+                            <div class="card__info">
+                                <div class="card__color">
+                                    <div class="card__color-val">Коричневый</div>
+                                    <div class="card__color-desc">окрас</div>    
+                                </div>
+                                <div class="card__age">
+                                    <div class="card__age-val">2 мес.</div>
+                                    <div class="card__age-desc">Возраст</div>
+                                </div>
+                                <div class="card__paws">
+                                    <div class="card__paws-val">4</div>
+                                    <div class="card__paws-desc">Кол-во лап</div>
+                                </div>
+                            </div>
+                            <div class="card__price">30 000 руб.</div>
+                        </div>
+                        <button class="card__btn">Купить</button>
+                    </div> -->
+                </div>
+                <div class="cards__more">
+                    <button class="btn btn_transparent">Показать еще 20</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="footer__left">
+                    <h2 class="footer__title">Успей купить!</h2>
+                    <p class="footer__desc">
+                        Подпишись и успей словить все акции
+                    </p>
+                </div>
+                <div class="footer__right">
+                    <form action="#" class="form" id="subscribeForm" method="POST">
+                        <div class="form__row">
+                            <div class="form__group">
+                                <input type="email" name="email" id="email">
+                                <span class="form__error">Не верный ввод электронной почты</span>
+                            </div>
+                            <div class="form__group">
+                                <button type="submit" class="btn btn_blue">Подписаться</button>
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__group form__group_inline">
+                                <input type="checkbox" name="subscribe" id="subscribe" checked>
+                                <label for="subscribe">Подписаться на новости</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="btn btn_blue scroll-top"><img src="./img/arrow-top.svg" alt=""></button>
+
+</body>
+
+<script src="./js/main.js"></script>
+
+</html>

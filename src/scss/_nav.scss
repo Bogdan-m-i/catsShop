@@ -1,0 +1,128 @@
+.nav {
+	color: $white;
+	display: flex;
+	align-items: flex-end;
+	padding-top: 40px;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		flex-basis: 15%;
+	}
+
+	&__mobile-wrap {
+		display: flex;
+		flex-basis: 85%;
+		
+		@include md {
+			display: none;
+		}
+	}
+
+	&__toggle {
+		display: none;
+		z-index: 500;
+		@include md {
+			display: block;
+		}
+	}
+
+	&__toggle-btn {
+		background: url('../img/burg.svg') center center no-repeat;
+		width: 18px;
+		height: 18px;
+		border: none;
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		flex-basis: 70%;
+		margin: 0 -35px;
+
+		@include xl {
+			margin: 0 -25px;
+		}
+		@include lg {
+			margin: 0 -10px;
+			flex-basis: 55%;
+		}
+	}
+	&__right {
+		flex-basis: 30%;
+		text-align: right;
+
+		@include lg {
+			flex-basis: 45%;
+		}
+	}
+
+	&__link {
+		margin: 0 35px;
+
+		@include xl {
+			margin: 0 25px;
+		}
+		@include lg {
+			margin: 0 10px;
+		}
+
+		a:hover {
+			color: $blue-hover;
+		}
+		a:active {
+			color: $blue-active;
+		}
+	}
+
+	&__desc {}
+
+	&__phone {
+		font-size: 24px;
+		font-weight: bold;
+
+		@include lg {
+			font-size: 20px;
+		}
+	}
+
+
+	&.active {
+		.nav__mobile-wrap {
+			@include md {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 100px 0;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: $black;
+			}
+		}
+		.nav__menu {
+			@include md {
+				flex-direction: column;
+				margin-bottom: 50px;
+				flex-basis: auto;
+			}
+		}
+		.nav__link {
+			@include md {
+				&:not(:last-child) {
+					margin-bottom: 25px;
+				}
+			}
+		}
+		.nav__toggle-btn {
+			background: url('../img/close.svg') center center no-repeat;
+		}
+	}
+}

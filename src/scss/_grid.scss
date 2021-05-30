@@ -1,0 +1,21 @@
+.container {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+
+    width: 1280px;
+
+    @include xl {
+        max-width: 960px;
+    }
+    @include lg {
+        max-width: 720px;
+    }
+    @include md {
+        max-width: 540px;
+    }
+    @include sm {
+        max-width: 100%;
+    }
+}

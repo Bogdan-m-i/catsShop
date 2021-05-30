@@ -1,0 +1,50 @@
+.footer {
+	background: $black;
+	padding: 80px 80px 90px;
+	color: $white;
+	display: flex;
+	
+	@include lg {
+		padding: 40px 40px 50px;
+	}
+
+	@include md {
+		flex-direction: column;
+	}
+
+	&__right {
+		flex: 1 1 calc(55% - 10px);
+		min-width: calc(55% - 10px);
+	}
+
+	&__left {
+		flex: 1 1 calc(45% - 10px);
+		min-width: calc(45% - 10px);
+		margin-right: 20px;
+		@include md {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__desc {
+		font-size: 28px;
+		line-height: 90%;
+		max-width: 400px;
+
+		@include lg {
+			font-size: 22px;
+		}
+	}
+
+	&__title {
+		font-size: 48px;
+		font-weight: bold;
+		margin-bottom: 25px;
+
+		@include lg {
+			font-size: 40px;
+			line-height: 36px;
+			margin-bottom: 15px;
+		}
+	}
+}
