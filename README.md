@@ -1,1 +1,1 @@
-# catsShop https://bogdan-m-i.github.io/catsShop/
+# catsShop https://bogdan-m-i.github.io/catsShop/dist
